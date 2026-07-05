@@ -1,0 +1,2429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>iPhone 17e</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+ 
+
+
+  <style>
+
+   
+    body {
+      background-color: black;
+      color: whitesmoke;
+      min-height: 100vh;
+      font-family: sans-serif;
+    }
+
+
+    /* NAVBAR */
+ nav{
+  background:#000;
+
+}
+.navbar-brand img{
+      height:28px;
+    }
+
+    .nav-link{
+      color:#d1d1d1 ;
+      transition:0.3s;
+    }
+
+    .nav-link:hover{
+      color:#fff ;
+    }
+
+    /* HERO SECTION */
+
+    .hero-section{
+      height:100vh;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .hero-video{
+      position:absolute;
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      z-index:-2;
+    }
+
+    .hero-overlay{
+      position:absolute;
+      inset:0;
+      background:rgba(0,0,0,0.45);
+      z-index:-1;
+    }
+
+    .hero-content{
+      position:absolute;
+      bottom:60px;
+      width:100%;
+      padding:0 60px;
+    }
+
+    .hero-title{
+      font-size:40px;
+      font-weight:700;
+      line-height:1.1;
+
+      background:linear-gradient(
+        90deg,
+        #a75bf4,
+        #f472b6,
+        #e879f9,
+        #f9a8d4,
+        #bf7fff
+      );
+
+      background-size:300% auto;
+
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+
+      animation:gradientMove 6s linear infinite;
+    }
+
+    @keyframes gradientMove{
+      0%{
+        background-position:0% center;
+      }
+      100%{
+        background-position:300% center;
+      }
+    }
+
+    .buy-btn{
+      background:#2563EB;
+      color:#fff;
+      border:none;
+      padding:12px 28px;
+      border-radius:50px;
+      transition:0.3s;
+      font-weight:600;
+    }
+
+    .buy-btn:hover{
+      background:#1D4ED8;
+      transform:translateY(-2px);
+    }
+
+    .price{
+      color:#d4d4d4;
+      margin-top:10px;
+    }
+
+    /* HIGHLIGHT SECTION  */
+
+.highlight-card{
+  background:#171717;
+  border-radius:28px;
+  padding:25px;
+  min-height:500px;
+  height:500px;
+  display:flex;
+  align-items:center;
+  
+  gap:15px;
+  overflow:hidden;
+  position:relative;
+  transition:0.4s ease;
+}
+
+/* Title*/
+
+.highlight-title{
+  padding: 10px;
+  margin-top: 25px;
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+/* TEXT */
+
+.highlight-text {
+  width: 45%;
+  padding-top: 30px;
+  z-index: 2;
+  text-align: left;
+  margin-left: auto;
+}
+
+.highlight-card .smaller p{
+    margin-left: 30px;
+}
+
+.highlight-text p{
+  font-size:20px;
+  line-height:1.7;
+  color:#e5e5e5;
+}
+
+/* IMAGE */
+
+.highlight-image{
+  width: 72%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.highlight-image .img1{
+  width: 400px;
+  height: 400px;
+}
+
+.highlight-image img{
+  width: 100%;
+  height: 100%;
+  max-height: 380px;
+  object-fit: contain;
+  display: block;
+  transition: 0.5s ease;
+}
+
+
+.highlight-card:hover img{
+  transform:scale(1.03);
+}
+
+    /* ANIMATION */
+
+    @keyframes fadeLeft{
+      from{
+        opacity:0;
+        transform:translateX(-50px);
+      }
+      to{
+        opacity:1;
+        transform:translateX(0);
+      }
+    }
+
+    @keyframes fadeRight{
+      from{
+        opacity:0;
+        transform:translateX(50px);
+      }
+      to{
+        opacity:1;
+        transform:translateX(0);
+      }
+    }
+
+    /* INDICATORS */
+
+.carousel-indicators{
+  position:relative;
+  margin-top:20px;
+}
+
+.carousel-indicators button{
+  width:6px ;
+  height:2px ;
+  border-radius:20%;
+  border:none;
+  background:#666 ;
+  margin:0 4px ;
+  opacity:1;
+}
+
+.carousel-indicators .active{
+  background:#fff ;
+  width:20px ;
+  border-radius:20px;
+}
+
+    /* RESPONSIVE */
+
+    /*TABLET */
+
+@media (max-width: 992px){
+
+  .highlight-card{
+    flex-direction: column;
+    text-align: center;
+    padding: 25px;
+    min-height: 300px;
+    gap: 15px;
+  }
+
+  .highlight-text{
+    width: 100%;
+    margin-left: 0;
+    font-size: 28px;
+    order: 1;
+  }
+
+  .highlight-image{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    order: 2;
+  }
+
+  .highlight-image img{
+    width: 90%;
+    max-width: 380px;
+    height: auto;
+    max-height: 350px;
+    object-fit: contain;
+  }
+}
+
+
+/* MOBILE */
+@media (max-width: 576px){
+
+  .highlight-card{
+    padding: 20px;
+    gap: 10px;
+  }
+
+  .highlight-text{
+    font-size: 20px;
+    margin-left: 0;
+  }
+
+  .highlight-image img{
+    max-width: 300px;
+  }
+}
+
+
+ /* DESIGN SECTION */
+
+h2{
+  font-size:60px;
+      font-weight:700;
+      line-height:1.1;
+
+      background:linear-gradient(
+        90deg,
+        #a75bf4,
+        #f472b6,
+        #e879f9,
+        #f9a8d4,
+        #bf7fff
+      );
+
+      background-size:300% auto;
+
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+        animation:gradientMove 6s linear infinite;
+    }
+
+    @keyframes gradientMove{
+      0%{
+        background-position:0% center;
+      }
+      100%{
+        background-position:300% center;
+      }
+    }
+
+
+.design-section{
+background: transparent;
+  overflow:hidden;
+}
+
+/* SUBTITLE */
+
+.design-subtitle{
+  color:#bdbdbd;
+  font-size:14px;
+  letter-spacing:1px;
+  margin-bottom:10px;
+  animation:fadeUp 1s ease;
+}
+
+/* TITLE */
+
+.design-title{
+  font-size:56px;
+  font-weight:700;
+  line-height:1.1;
+  margin-bottom:40px;
+  animation:fadeUp 1s ease;
+}
+
+/* IMAGE */
+
+.design-image{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin-top:20px;
+  animation:zoomIn 1.2s ease;
+}
+
+.design-image img{
+  width:100%;
+  max-width:950px;
+  object-fit:contain;
+  transition:0.5s ease;
+}
+
+.design-image img:hover{
+  transform:scale(1.03);
+}
+
+/* CARDS */
+
+.design-card{
+  background:#171717;
+  border-radius:24px;
+  padding:30px;
+  height:100%;
+  transition:0.4s ease;
+  animation:fadeUp 1.2s ease;
+}
+
+.design-card:hover{
+  transform:translateY(-6px);
+box-shadow:0 15px 10px rgba(255,255,255,0.08);
+}
+
+/* LEFT CARD */
+
+.left-card p{
+  color:#a3a0a0;
+  font-size:16px;
+  line-height:1.9;
+  text-align:left;
+}
+
+.left-card p:hover{
+  color: #dddada;
+}
+
+/* RIGHT CARD */
+
+.right-card{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  min-height:100%;
+}
+
+.right-card h5{
+  font-size:30px;
+  font-weight:700;
+  margin-bottom:10px;
+
+  background:linear-gradient(90deg,#a855f7,#ec4899,#c084fc);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.right-card p{
+  color:#d4d4d4;
+  font-size:18px;
+  line-height:1.7;
+}
+
+
+@keyframes zoomIn{
+  from{
+    opacity:0;
+    transform:scale(0.9);
+  }
+  to{
+    opacity:1;
+    transform:scale(1);
+  }
+}
+
+/* RESPONSIVE */
+/* LAPTOP / MAC */
+@media(max-width:992px){
+
+  .design-title{font-size:40px;}
+
+  .design-image img{max-width:100%;}
+
+  .design-card{padding:22px;}
+
+  .left-card p,
+  .right-card p{
+    font-size:15px;
+    line-height:1.8;
+  }
+
+  .right-card h3{font-size:70px;}
+}
+
+/* PHONE */
+@media(max-width:576px){
+
+  .design-section{padding:50px 0;}
+
+  .design-title{
+    font-size:30px;
+    line-height:1.2;
+  }
+
+  .design-image{
+    margin-top:10px;
+  }
+
+  .design-image img{
+    width:100%;
+    max-width:340px;
+  }
+
+  .design-card{
+    padding:18px;
+    border-radius:20px;
+  }
+
+  .left-card p,
+  .right-card p{
+    font-size:14px;
+    line-height:1.7;
+  }
+
+  .right-card h3{
+    font-size:56px;
+  }
+}
+
+
+/* SCROLL SECTION */
+
+.card-scroll-section{
+  padding:80px 0;
+  overflow:hidden;
+ background: transparent;
+}
+
+/* SCROLL WRAPPER */
+
+.scroll-wrapper{
+  display:flex;
+  gap:24px;
+  overflow-x:auto;
+  scroll-behavior:smooth;
+  padding:10px 20px 30px;
+
+  scrollbar-width:none;
+}
+
+.scroll-wrapper::-webkit-scrollbar{
+  display:none;
+}
+
+/* CARD BOX */
+
+.card-box{
+  min-width:380px;
+  flex-shrink:0;
+
+  animation:fadeUp 1s ease;
+}
+
+/* IMAGE CARD */
+
+.scroll-card{
+  width:100%;
+  height:420px;
+
+  background:#111111;
+  border-radius:32px;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  overflow:hidden;
+  position:relative;
+
+  transition:0.5s ease;
+}
+
+/* HOVER EFFECT */
+
+.scroll-card:hover{
+  transform:translateY(-12px) scale(1.02);
+  box-shadow:0 25px 60px rgba(0,0,0,0.5);
+}
+
+/* IMAGE */
+
+.scroll-card img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+
+  transition:0.8s ease;
+}
+
+/* IMAGE HOVER */
+
+.scroll-card:hover img{
+  transform:scale(1.08);
+}
+
+/* LIGHT GLOW */
+
+.scroll-card::before{
+  content:"";
+  position:absolute;
+  inset:0;
+
+  background:linear-gradient(
+    180deg,
+    rgba(58, 58, 58, 0.08),
+    transparent
+  );
+
+  z-index:1;
+}
+
+/* TEXT CARD */
+
+.card-text{
+  margin-top:18px;
+ padding:24px;
+ color:#a3a0a0;
+  font-size:15px;
+  line-height:1.9;
+ transition:0.5s ease;
+ animation:fadeText 1.2s ease;
+}
+
+/* TEXT HOVER */
+
+.card-box:hover .card-text{
+  transform:translateY(-8px);
+  color:#dddada;
+}
+
+@keyframes fadeUp{
+
+  from{
+    opacity:0;
+    transform:translateY(60px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+@keyframes fadeText{
+
+  from{
+    opacity:0;
+    transform:translateY(30px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+/*TABLET */
+
+@media(max-width:992px){
+
+  .card-box{
+    min-width:320px;
+  }
+
+  .scroll-card{
+    height:360px;
+  }
+
+  .card-text{
+    font-size:14px;
+    line-height:1.8;
+    padding:20px;
+  }
+}
+
+/* MOBILE */
+
+@media(max-width:576px){
+
+  .card-scroll-section{
+    padding:50px 0;
+  }
+
+  .scroll-wrapper{
+    gap:16px;
+    padding:10px 16px 20px;
+  }
+
+  .card-box{
+    min-width:260px;
+  }
+
+  .scroll-card{
+    height:300px;
+    border-radius:24px;
+  }
+
+  .card-text{
+    font-size:13px;
+    line-height:1.7;
+    padding:18px;
+    border-radius:20px;
+  }
+
+  .scroll-card:hover{
+    transform:none;
+  }
+
+}
+
+/* BATTERY SECTION */
+
+.battery-section{
+ background: transparent;
+ overflow:hidden;
+ padding:40px 0 80px;
+}
+
+/* SUBTITLE */
+
+.battery-subtitle{
+  margin:0 0 10px;
+  color:#9ca3af;
+  font-size:14px;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+}
+
+/* TITLE */
+
+.battery-title{
+  margin:0;
+ font-size:64px;
+ font-weight:700;
+ line-height:1.05;
+ background:linear-gradient(
+    90deg,
+    #8b5cf6,
+    #ec4899,
+    #c084fc
+  );
+
+  background-size:300% auto;
+
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+
+  animation:gradientMove 6s linear infinite;
+}
+
+/* DESCRIPTION */
+
+.battery-description{
+  max-width:900px;
+  margin:18px auto 10px;
+  color:#9ca3af;
+  font-size:17px;
+  line-height:1.9;
+}
+
+/*  IMAGE */
+
+.battery-image{
+  margin-top:0;
+}
+
+.battery-image img{
+  width:100%;
+  max-width:950px;
+  object-fit:contain;
+  animation:floating 4s ease-in-out infinite;
+  transition:0.5s ease;
+}
+
+.battery-image img:hover{
+  transform:scale(1.03);
+}
+
+@keyframes floating{
+
+  0%{
+    transform:translateY(0px);
+  }
+
+  50%{
+    transform:translateY(-10px);
+  }
+
+  100%{
+    transform:translateY(0px);
+  }
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+  .battery-section{
+    padding:30px 0 60px;
+  }
+
+  .battery-title{
+    font-size:40px;
+  }
+
+  .battery-description{
+    font-size:14px;
+   line-height:1.8;
+   padding:0 10px;
+  }
+
+  .battery-image{
+    margin-top:10px;
+  }
+}
+
+@media(max-width:576px){
+
+  .battery-title{
+    font-size:32px;
+  }
+
+  .battery-subtitle{
+    font-size:12px;
+  }
+
+  .battery-description{
+    font-size:13px;
+  }
+}
+
+
+/* PERFORMANCE WRAPPER */
+
+.performance-wrapper{
+  margin-top:50px;
+  border:1px solid #2b2b2b;
+  border-radius:32px;
+ padding:30px;
+ background:transparent;
+ overflow:hidden;
+ transition:0.5s ease;
+}
+
+/* HOVER */
+
+.performance-wrapper:hover{
+  border-color:#5a5a5a;
+  
+  box-shadow:
+    0 15px 10px rgba(255,255,255,0.05),
+   
+}
+
+/* ROW */
+
+.performance-row{
+  display:flex;
+  align-items:stretch;
+  flex-wrap:wrap;
+}
+
+/* INSIDE ITEMS */
+
+.performance-item{
+  flex:1;
+  min-width:220px;
+  padding:25px;
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+
+/* VERTICAL BORDER */
+
+.performance-item:not(:last-child)::after{
+ position:absolute;
+  right:0;
+  top:15%;
+ width:1px;
+  height:70%;
+ background:#2f2f2f;
+}
+.stats-small,
+.compare-text{
+  color:#9ca3af;
+  font-size:13px;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  margin-bottom:12px;
+}
+
+.stats-title{
+  font-size:42px;
+  font-weight:700;
+  line-height:1.1;
+  margin-bottom:12px;
+  animation:gradientMove 6s linear infinite;
+}
+
+.stats-sub{
+  color:#bdbdbd;
+  font-size:15px;
+  line-height:1.7;
+  margin:0;
+}
+
+
+
+.compare-box{
+  width:100%;
+    padding-top:25px;
+
+}
+
+.compare-box select{
+  width:100%;
+  height:55px;
+  background:#111111;
+  border:1px solid #343434;
+  color:#fff;
+  padding:0 20px;
+  border-radius:50px;
+  outline:none;
+  font-size:15px;
+  appearance:auto; 
+  cursor:pointer;
+  transition:0.4s ease;
+}
+
+/* HOVER */
+
+.compare-box select:hover{
+  border-color:#8b5cf6;
+
+  box-shadow:
+    0 0 20px rgba(139,92,246,0.18);
+}
+
+.compare-box select option{
+  background:#111111;
+  color:#ffffff;
+}
+
+/* MOBILE */
+
+@media(max-width:992px){
+
+  .performance-item{
+    min-width:50%;
+  }
+
+  .performance-item:nth-child(2)::after{
+    display:none;
+  }
+
+  .stats-title{
+    font-size:34px;
+  }
+}
+
+@media(max-width:576px){
+
+  .performance-wrapper{
+    padding:15px;
+  }
+
+  .performance-item{
+    min-width:100%;
+    padding:22px 10px;
+  }
+
+  .performance-item::after{
+    display:none;
+  }
+
+  .stats-title{
+    font-size:28px;
+  }
+}
+
+/* COLOR SECTION  */
+
+.phone-slider {
+  width: 100%;
+  max-width: 420px;
+  margin: 40px auto;
+  overflow: hidden;
+  position: relative;
+  border-radius: 40px;
+}
+
+.phone-track {
+  display: flex;
+  width: 1260px;           /* 420px * 3 */
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.phone-track img {
+  width: 420px;
+  height: auto;
+  object-fit: contain;
+  flex-shrink: 0;
+  transition: transform 0.4s ease;
+}
+
+.phone-track img:hover {
+  transform: scale(1.05) translateY(-8px);
+}
+
+/* Buttons */
+
+.color-options {
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+  margin-top: 35px;
+}
+
+.color-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.color-btn.active {
+  border-color: #fff;
+  transform: scale(1.2);
+  box-shadow: 0 0 10px rgba(255,255,255,0.4);
+}
+
+.color-btn:hover {
+  transform: scale(1.20);
+}
+
+/*COLOR SECTION */
+
+.color-section {
+ background: transparent;
+  padding: 120px 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.color-subtitle {
+  color: #9ca3af;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.color-title {
+  font-size: 72px;
+  font-weight: 700;
+  margin-bottom: 70px;
+  line-height: 1.05;
+  background: linear-gradient(90deg, #8b5cf6, #ec4899, #c084fc);
+  background-size: 300% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientMove 6s linear infinite;
+}
+
+.color-name {
+  color: #d1d5db;
+  margin-top: 22px;
+  font-size: 18px;
+  letter-spacing: 1px;
+  text-align: center;
+  display: block;
+  width: 100%;
+  min-height: 28px;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .color-section { padding: 80px 0; }
+  .color-title { font-size: 46px; }
+  .phone-slider { max-width: 300px; }
+  .phone-track { width: 900px; }
+  .phone-track img { width: 300px; }
+  .color-btn { width: 36px; height: 36px; }
+}
+
+/*  CAMERA SECTION */
+
+.camera-section{
+      padding:100px 0;
+      background:transparent;
+      overflow:hidden;
+    }
+
+    .camera-subtile {
+      color: #9ca3af;
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .camera-title {
+      font-size: 48px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+
+    /* discription */
+
+    .camera-text {
+      max-width: 800px;
+      margin: 0 auto 50px;
+      color: #9ca3af;
+      font-size: 17px;
+      line-height: 1.6;
+    }
+
+    .camera-text span{
+      color: purple;
+    }
+
+    /* SLIDER */
+
+    .image-slider{
+      width:100%;
+      overflow:hidden;
+      border-radius:35px;
+      position:relative;
+    }
+
+    .image-track{
+      display:flex;
+      width:500%;
+      transition:transform 0.9s cubic-bezier(0.77,0,0.175,1);
+    }
+
+    .slide-item{
+      width:20%;
+      flex-shrink:0;
+      position:relative;
+    }
+
+    .slide-item img,
+    .slide-item video{
+      width:100%;
+      height:600px;
+      object-fit:cover;
+      display:block;
+      border-radius:35px;
+      transition:1s ease;
+    }
+
+    .slide-item:hover img,
+    .slide-item:hover video{
+      transform:scale(1.04);
+    }
+
+    /* BUTTONS */
+
+    .option{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      flex-wrap:wrap;
+      gap:14px;
+      margin-top:40px;
+    }
+
+    .cam-btn{
+      background:transparent;
+      border:none;
+      color:#8e8e93;
+      font-size:17px;
+      font-weight:500;
+      padding:12px 22px;
+      border-radius:50px;
+      cursor:pointer;
+      transition:0.4s ease;
+    }
+
+    .cam-btn.active{
+      background:#1c1c1e;
+      color:#fff;
+      font-family: sans-serif;
+      box-shadow:0 0 25px rgba(255,255,255,0.08);
+    }
+
+    .cam-btn:hover{
+      color:#dddada;
+      transform:translateY(-2px);
+    }
+
+   
+    .camera-info{
+      margin-top:45px;
+    }
+
+    .image-name{
+      font-size:42px;
+      font-weight:700;
+      color:#fff;
+      font-family: sans-serif;
+      margin-bottom:18px;
+    }
+
+    .camera-text-info{
+      max-width:900px;
+      margin:auto;
+      color:#9ca3af;
+      font-family: sans-serif;
+      font-size:17px;
+      line-height:1.9;
+    }
+
+    @keyframes fadeUp{
+      from{ opacity:0; transform:translateY(40px); }
+      to{ opacity:1; transform:translateY(0); }
+    }
+
+    /* Responsive */
+
+    @media(max-width:992px){
+      .slide-item img, .slide-item video{ height:520px; }
+      .image-name{ font-size:32px; }
+      .camera-text-info{ font-size:17px; }
+    }
+
+    @media(max-width:576px){
+      .camera-section{ padding:70px 0; }
+      .slide-item img, .slide-item video{ height:320px; border-radius:22px; }
+      .cam-btn{ font-size:13px; padding:10px 16px; }
+      .image-name{ font-size:24px; }
+      .camera-text-info{ font-size:15px; }
+    }
+
+    /* STORAGE SECTION */
+
+.storage-section{
+  padding:120px 0;
+  position:relative;
+  overflow:hidden;
+}
+
+/* SUBTITLE */
+
+.storage-subtitle{
+  color:#9ca3af;
+  font-size:14px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  margin-bottom:14px;
+}
+
+/* TITLE */
+
+.storage-title{
+  font-size:68px;
+  font-weight:700;
+  line-height:1.05;
+  margin-bottom:28px;
+
+  background:linear-gradient(
+    90deg,
+    #8b5cf6,
+    #ec4899,
+    #c084fc
+  );
+
+  background-size:300% auto;
+
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+
+  animation:gradientMove 6s linear infinite;
+}
+
+/* DESCRIPTION */
+
+.storage-description{
+  max-width:980px;
+  margin:auto;
+
+  color:#a1a1aa;
+
+  font-size:17px;
+  line-height:1.9;
+}
+
+/* IMAGE */
+
+.storage-image{
+  margin-top:70px;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.storage-image img{
+  width:100%;
+  max-width:350px;   
+  height:auto;      
+  border-radius:32px;
+  object-fit:contain;
+  transition:0.5s ease;
+  box-shadow:
+    0 20px 60px rgba(0,0,0,0.45);
+}
+
+/* HOVER */
+
+.storage-image img:hover{
+  transform:scale(1.03);
+}
+
+.storage-box{
+  margin-top:55px;
+}
+
+.storage-highlight{
+  font-size:90px;
+  font-weight:700;
+  line-height:1;
+
+  background:linear-gradient(
+    90deg,
+    #ffffff,
+    #c084fc
+  );
+
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+/* STORAGE TEXT */
+
+.storage-text{
+  margin-top:10px;
+
+  color:#9ca3af;
+
+  font-size:18px;
+
+  letter-spacing:1px;
+
+  text-transform:uppercase;
+}
+
+
+
+/*TABLET */
+/* TABLET */
+@media(max-width:992px){
+  .storage-title{font-size:50px;}
+  .storage-description{font-size:16px; line-height:1.8;}
+  .storage-highlight{font-size:72px;}
+}
+
+/* MOBILE */
+@media(max-width:576px){
+
+  .storage-section{padding:80px 0;}
+
+  .storage-title{
+    font-size:34px;
+    line-height:1.2;
+  }
+
+  .storage-description,
+  .storage-text{
+    font-size:14px;
+    line-height:1.8;
+  }
+
+  .storage-image{
+    margin-top:40px;
+  }
+
+  .storage-image img{
+    border-radius:24px;
+  }
+
+  .storage-highlight{
+    font-size:54px;
+  }
+}
+
+/* FAMILY SECTION */
+
+.family-section{
+  padding:120px 0;
+  overflow:hidden;
+  position:relative;
+}
+
+/* SUBTITLE */
+
+.family-subtitle{
+  color:#9ca3af;
+  font-size:14px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  margin-bottom:14px;
+}
+
+/* TITLE */
+
+.family-title{
+  font-size:68px;
+  font-weight:700;
+  line-height:1.08;
+  margin-bottom:60px;
+
+  background:linear-gradient(
+    90deg,
+    #8b5cf6,
+    #ec4899,
+    #c084fc
+  );
+
+  background-size:300% auto;
+
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+
+  animation:gradientMove 6s linear infinite;
+}
+
+/* IMAGE */
+
+.family-image{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin-bottom:45px;
+}
+
+.family-image img{
+  width:100%;
+  max-width:600px;
+  height: auto;
+  border-radius:36px;
+  object-fit:cover;
+  transition:0.6s ease;
+  box-shadow:
+    0 20px 60px rgba(0,0,0,0.45);
+}
+
+/* HOVER */
+
+.family-image img:hover{
+  transform:scale(1.02);
+}
+
+/* DESCRIPTION */
+
+.family-description{
+  max-width:1000px;
+  margin:auto;
+  text-align:center;
+  color:#a1a1aa;
+  font-size:17px;
+  line-height:1.9;
+}
+
+
+
+/* TABLET */
+
+@media(max-width:992px){
+
+  .family-title{
+    font-size:50px;
+  }
+
+  .family-description{
+    font-size:16px;
+    line-height:1.8;
+    padding:0 10px;
+  }
+}
+
+/* MOBILE */
+
+@media(max-width:576px){
+
+  .family-section{
+    padding:80px 0;
+  }
+
+  .family-title{
+    font-size:34px;
+    line-height:1.15;
+    margin-bottom:40px;
+  }
+
+  .family-image img{
+    border-radius:24px;
+  }
+
+  .family-description{
+    font-size:14px;
+    line-height:1.8;
+  }
+}
+
+/* FOOTER SECTION */
+
+.footer-section{
+  padding:35px ;
+ border-top:1px solid rgba(255,255,255,0.08);
+ background:rgba(255,255,255,0.02);
+ backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+ margin-top:80px;
+}
+
+/* FOOTER TEXT */
+
+.footer-text{
+  margin:0;
+  color:#9ca3af;
+  font-size:14px;
+  letter-spacing:0.5px;
+  transition:0.4s ease;
+}
+
+/* HOVER */
+
+.footer-text:hover{
+  color:#ffffff;
+}
+
+/* MOBILE */
+
+@media(max-width:576px){
+
+  .footer-section{
+    padding:25px 0;
+    margin-top:50px;
+  }
+
+  .footer-text{
+    font-size:12px;
+    line-height:1.7;
+    padding:0 10px;
+  }
+}
+  </style>
+</head>
+
+<body>
+
+<!-- NAVBAR-->
+
+<nav class="navbar navbar-expand-lg navbar-dark">
+
+  <div class="container-fluid">
+
+    <a class="navbar-brand ms-4" href="index.html">
+      <img src="img/logo.png" style="height:28px;">
+    </a>
+
+    <button class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navMenu">
+
+      <span class="navbar-toggler-icon"></span>
+
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMenu">
+
+      <ul class="navbar-nav mx-auto gap-lg-4">
+
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Overview</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="shop.html">Shop</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">Mac</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">iPad</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">iPhone</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">Watch</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="support.html">Support</a>
+        </li>
+
+      </ul>
+
+      <ul class="navbar-nav me-4 flex-row align-items-center">
+
+        <li class="nav-item me-3">
+          <a class="nav-link" href="#">
+            <i class="bi bi-search"></i>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <i class="bi bi-bag"></i>
+          </a>
+        </li>
+
+      </ul>
+
+    </div>
+
+  </div>
+
+</nav>
+
+<!--HERO SECTION-->
+
+<section class="hero-section">
+
+  <video autoplay muted loop playsinline class="hero-video">
+
+    <source src="img/hero.mp4"
+      type="video/mp4">
+
+  </video>
+
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+
+    <div class="d-flex justify-content-between align-items-end flex-wrap gap-4">
+
+      <div>
+
+        <p style="font-size:22px; font-weight:600;">
+          iPhone 17e
+        </p>
+
+        <h1 class="hero-title">
+          Feature stacked.<br> Value packed.
+        </h1>
+
+      </div>
+
+      <div class="text-lg-end">
+
+        <button class="buy-btn"> Buy Now </button>
+
+        <p class="price"> From ₹64,900 </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- HIGHLIGHTS-->
+
+<section class="highlight-section">
+
+  <div class="container">
+
+    <h3 class="highlight-title">
+      Get the highlights.
+    </h3>
+
+    <div id="highlightSlider"
+      class="carousel slide"
+      data-bs-ride="carousel"
+      data-bs-interval="2500"
+      data-bs-touch="true">
+
+      <div class="carousel-inner">
+
+        <!-- SLIDE 1 -->
+
+        <div class="carousel-item active">
+
+          <div class="highlight-card smaller">
+
+            <div class="highlight-text" style="margin-left: 35px; ">
+
+              <p>
+                Built to last. Featuring Ceramic Shield 2 with up to
+                3× better scratch resistance for enhanced durability.
+              </p>
+
+            </div>
+
+            <div class="highlight-image" style="margin-right: 100px; background-position: center; background-size: cover;">
+
+              <img src="img/highlight1.png"
+                   alt=""
+                   loading="lazy"
+                   draggable="false">
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- SLIDE 2 -->
+
+        <div class="carousel-item">
+
+          <div class="highlight-card smaller">
+
+            <div class="highlight-text" style="margin-left: 35px; ">
+
+              <p>
+                Power through your day with all-day battery life.
+                Fast USB-C charging and built-in MagSafe support.
+              </p>
+
+            </div>
+
+            <div class="highlight-image" style="margin-right: 50px; background-position: center; background-size: cover;">
+
+              <img src="img/highlight2.png"
+                   alt=""
+                   loading="lazy"
+                   draggable="false">
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- SLIDE 3 -->
+
+        <div class="carousel-item">
+
+          <div class="highlight-card">
+
+            <div class="highlight-text" style="margin-left: 40px;">
+
+              <p>
+                Capture every detail with the 48MP Fusion camera.
+                Stunning portraits and 256GB starting storage.
+              </p>
+
+            </div>
+
+            <div class="highlight-image " >
+
+              <img src="img/hig3.jpg"
+                   alt=""
+                   loading="lazy"
+                   draggable="false">
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- SLIDE 4 -->
+
+        <div class="carousel-item">
+
+          <div class="highlight-card smaller">
+
+            <div class="highlight-text" style="margin-left: 35px;">
+
+              <p>
+                Powered by the latest A19 chip.
+                Smooth AAA gaming and ultra-fast 4K streaming.
+              </p>
+
+            </div>
+
+            <div class="highlight-image" >
+
+              <img src="img/highl4.png"
+                   alt=""
+                   loading="lazy"
+                   draggable="false">
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- SLIDE 5 -->
+
+        <div class="carousel-item">
+
+          <div class="highlight-card">
+
+            <div class="highlight-text" style="margin-left: 100px;">
+
+              <p>
+                iOS 26 with Apple Intelligence.
+                Smarter, faster and effortlessly helpful every day.
+              </p>
+
+            </div>
+
+            <div class="highlight-image" >
+
+              <img src="img/higl5.jpg"
+                   alt=""
+                   loading="lazy"
+                   draggable="false">
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- COROUSEL BUTTONS -->
+
+      <div class="carousel-indicators">
+
+        <button type="button"
+          data-bs-target="#highlightSlider"
+          data-bs-slide-to="0"
+          class="active">
+        </button>
+
+        <button type="button"
+          data-bs-target="#highlightSlider"
+          data-bs-slide-to="1">
+        </button>
+
+        <button type="button"
+          data-bs-target="#highlightSlider"
+          data-bs-slide-to="2">
+        </button>
+
+        <button type="button"
+          data-bs-target="#highlightSlider"
+          data-bs-slide-to="3">
+        </button>
+
+        <button type="button"
+          data-bs-target="#highlightSlider"
+          data-bs-slide-to="4">
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- DURABLE DESIGN SECTION -->
+
+<section class="design-section py-5">
+
+  <div class="container text-center">
+
+    <p class="design-subtitle">
+      Durable design
+    </p>
+
+    <h2 class="design-title">
+      Designed to <br>
+      go the distance.
+    </h2>
+      
+    <!-- IMAGE -->
+
+    <div class="design-image">
+
+      <img src="img/dig1.png" alt="iPhone Design">
+
+    </div>
+
+    <!-- CONTENT -->
+
+    <div class="row align-items-center mt-5 g-4">
+
+      <!-- LEFT -->
+
+      <div class="col-lg-7">
+
+        <div class="design-card left-card">
+
+          <p>
+            Beautiful — and built to stay that way — iPhone 17e is designed
+            with a durable aluminium frame and has Ceramic Shield 2 on the
+            front, providing 3x better scratch resistance than iPhone 16e.
+            Tougher than any smartphone glass, it protects your iPhone from
+            everyday drops and scratches. iPhone 17e also features USB-C for
+            fast charging and seamless connectivity with Apple devices and
+            accessories.
+          </p>
+
+        </div>
+
+      </div>
+
+      <!-- RIGHT -->
+
+      <div class="col-lg-5">
+
+        <div class="design-card right-card">
+
+        <h5>3×  Better scratch resistance</h5>
+
+          <p>
+          
+            with Ceramic Shield 2
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!--SCROLL CARD SECTION-->
+
+<section class="card-scroll-section">
+
+  <div class="scroll-wrapper">
+
+    <!-- CARD 1 -->
+    <div class="card-box">
+
+      <div class="scroll-card">
+        <img src="img/dig2.png" alt="">
+      </div>
+
+      <p class="card-text">
+        Now with MagSafe. iPhone 17e enables wireless charging up  to 15W, compared  <br>to 7.5W  with iPhone 16e.  That means  when you need to charge, it’s easy, <br> convenient and fast.  And with built-in magnets, you can easily snap into a family <br> of accessories  including chargers, cases and more.2
+
+      </p>
+
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="card-box">
+
+      <div class="scroll-card">
+        <img src="img/dig3.png" alt="">
+      </div>
+
+      <p class="card-text">
+        Stunning display. The 15.40 cm (6.1″) Super Retina XDR  display4 makes photos pop <br> with  colour and text sharp and easy to read. A new seven-layer anti-reflective <br> coating reduces glare even in bright sunlight.
+      </p>
+
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="card-box">
+
+      <div class="scroll-card">
+        <img src="img/dig5.png" alt="">
+      </div>
+
+      <p class="card-text">
+       Face ID. Use Face ID to securely unlock  <br>and sign in to apps with just a glance.
+      </p>
+
+    </div>
+
+    <!-- CARD 4 -->
+    <div class="card-box">
+
+      <div class="scroll-card">
+        <img src="img/dig4.png" alt="">
+      </div>
+
+      <p class="card-text">
+    Action button. A customisable fast track to your favourite feature.  Long press  <br>  to launch the action you want — Silent  mode, Translation,  visual intelligence5 and more.
+
+      </p>
+
+    </div>
+
+    <!-- CARD 5 -->
+    <div class="card-box">
+
+      <div class="scroll-card">
+        <img src="img/dig6.png" alt="">
+      </div>
+
+      <p class="card-text">
+      Colours. iPhone 17e comes in three beautiful colours. Choose  <br>timeless  black or white or a new blush-worthy soft pink.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!--BATTERY SECTION-->
+
+<section class="battery-section">
+
+  <div class="container text-center">
+
+    <!-- SUBTITLE -->
+
+    <p class="battery-subtitle reveal">
+      Performance and battery life
+    </p>
+
+    <!-- TITLE -->
+
+    <h2 class="battery-title reveal">
+      Blasts and lasts.
+    </h2>
+
+    <!-- DESCRIPTION -->
+
+    <p class="battery-description ">
+      The powerful A19 chip delivers ultra-fast and smooth performance for gaming, streaming and everyday tasks. Paired with the advanced C1X modem, everything feels quicker and more responsive — with up to 26 hours of video playback.
+    </p>
+
+    <!-- IMAGE -->
+
+    <div class="battery-image reveal">
+
+      <img src="img/batrylife.png" alt="Battery Life">
+
+    </div>
+
+  </div>
+
+  <!--PERFORMANCE-->
+
+<div class="performance-wrapper reveal">
+
+  <div class="row performance-row g-4">
+
+    <!-- CARD 1 -->
+
+<div class="col-lg-3 col-md-6 performance-item">
+
+  <div class="equal-card">
+
+    <div class="compare-box">
+
+      <p class="compare-text">
+        Compare with
+      </p>
+
+      <select class="compare-select">
+
+        <option selected disabled> Choose iPhone </option>
+
+        <option>iPhone 11</option>
+        <option>iPhone 12</option>
+        <option>iPhone 13</option>
+        <option>iPhone 14</option>
+        <option>iPhone 15</option>
+
+      </select>
+
+    </div>
+
+  </div>
+
+</div>
+
+    <!-- CARD 2 -->
+
+    <div class="col-lg-3 col-md-6">
+
+      <div class="stats-card equal-card text-center">
+
+        <p class="stats-small">
+          Up to
+        </p>
+
+        <h3 class="stats-title">
+          2.2x faster
+        </h3>
+
+        <p class="stats-sub">
+          4-core GPU performance
+        </p>
+
+      </div>
+
+    </div>
+
+    <!-- CARD 3 -->
+
+    <div class="col-lg-3 col-md-6">
+
+      <div class="stats-card equal-card text-center">
+
+        <p class="stats-small">
+          Up to
+        </p>
+
+        <h3 class="stats-title">
+          9 more hours
+        </h3>
+
+        <p class="stats-sub">
+          video playback
+        </p>
+
+      </div>
+
+    </div>
+
+    <!-- CARD 4 -->
+
+    <div class="col-lg-3 col-md-6">
+
+      <div class="stats-card equal-card text-center">
+
+        <p class="stats-small">
+          Up to
+        </p>
+
+        <h3 class="stats-title">
+          50% charge
+        </h3>
+
+        <p class="stats-sub">
+          in 30 minutes with 20W adapter
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+</section>
+
+<!-- PHONE COLOR SECTION-->
+
+<section class="color-section">
+  <div class="container text-center">
+    <p class="color-subtitle">Finish</p>
+    <h2 class="color-title">Pick your favourite.</h2>
+
+    <!-- PHONE SLIDER -->
+
+    <div class="phone-slider">
+      <div class="phone-track" id="phoneTrack">
+        <img src="img/pink.png" alt="Pink iPhone">
+        <img src="img/white.png" alt="White iPhone">
+        <img src="img/black.png" alt="Black iPhone">
+      </div>
+    </div>
+
+    <div class="color-options">
+      <button class="color-btn active" data-index="0" data-name="Pink Titanium" style="background:#ffb6c1;"></button>
+      <button class="color-btn" data-index="1" data-name="White Titanium" style="background:#f3f3f3;"></button>
+      <button class="color-btn" data-index="2" data-name="Black Titanium" style="background:#1f2937;"></button>
+    </div>
+
+    <p id="colorName" class="color-name">Pink Titanium</p>
+  </div>
+</section>
+
+
+ 
+<!--CAMERA SECTION-->
+
+<section class="camera-section">
+  <div class="container text-center">
+    <p class="camera-subtitle text-muted">48MP Fusion camera</p>
+    <h2 class="camera-title">Perfekt für Porträts.</h2>
+    <p class="camera-text">The versatile 48MP Fusion camera on iPhone 17e has the capabilities of two advanced cameras in one. So you can capture super-high-resolution photos and theatre-worthy 4K videos with exceptional detail, or use the <span>2x Telephoto</span> to zoom in with optical quality. And with <span>next-generation portraits</span>, you can capture frame-worthy portraits more easily than ever.
+</p>
+
+    <!-- SLIDER -->
+
+    <div class="image-slider">
+      <div class="image-track" id="imageTrack">
+        <div class="slide-item">
+          <img src="img/camera.jpg" alt="Next-generation portraits">
+        </div>
+        <div class="slide-item">
+          <img src="img/cam img2.jpg" alt="2x Telephoto">
+        </div>
+        <div class="slide-item">
+          <video autoplay muted loop playsinline>
+            <source src="img/cam img3.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="slide-item">
+          <img src="img/cam img4.jpg" alt="Low-light">
+        </div>
+        <div class="slide-item">
+          <img src="img/cam img5.jpg" alt="4K video">
+        </div>
+      </div>
+    </div>
+
+    <!-- BUTTONS -->
+     
+    <div class="option">
+      <button class="cam-btn active" data-index="0" data-name="Next-generation portraits" data-text="Capture the moment in photos and turn them into beautiful portraits later by adding a background blur after the shot. You can even change the focus point to highlight subjects on the move, like kids or pets.">Next-generation portraits</button>
+      <button class="cam-btn" data-index="1" data-name="2x Telephoto" data-text="Zoom in on your subjects up to 2x with optical quality and keep going up to 10x.">2x Telephoto</button>
+      <button class="cam-btn" data-index="2" data-name="Clean Up" data-text="Remove unwanted distractions. Available on all the latest iPhone models, it’s a photo editing tool that stays true to the original intent of the photo.">Clean Up</button>
+      <button class="cam-btn" data-index="3" data-name="Low-light" data-text="Capture sharp, detailed and bright images with natural colours, even when it’s dark.">Low-light and Night mode photography </button>
+      <button class="cam-btn" data-index="4" data-name="4K video" data-text="Record theatre-worthy 4K 60 fps video in Dolby Vision with automatic wind noise reduction. Use Audio Mix to adjust the way voices sound in your videos. And film multiple scenes in just one shot using pause and record.">4K video</button>
+    </div>
+
+    <!-- TEXT -->
+
+    <div class="camera-info">
+      <h2 id="imageName" class="image-name">Next-generation portraits.</h2>
+      <p id="cameraText" class="camera-text-info">Capture the moment in photos and turn them into beautiful portraits later by adding a background blur after the shot. You can even change the focus point to highlight subjects on the move, like kids or pets.</p>
+    </div>
+  </div>
+</section>
+
+
+
+<!--STORAGE SECTION-->
+
+<section class="storage-section">
+
+  <div class="container text-center">
+
+    <!-- SUBTITLE -->
+
+    <p class="storage-subtitle">
+      Storage
+    </p>
+
+    <!-- TITLE -->
+
+    <h2 class="storage-title">
+      So much more storage.<br>
+      So many more memories.
+    </h2>
+
+    <!-- DESCRIPTION -->
+
+    <p class="storage-description">
+      With storage starting at 256GB — that’s 2× more than iPhone 16e and 4× more than iPhone 12 — you’ll have more space for what matters. From super-high-resolution photos to 4K videos to your favourite apps, games and more, there’s plenty of room for everything you love, now and in the future.
+    </p>
+
+    <!-- IMAGE -->
+
+    <div class="storage-image">
+
+      <img src="img/storage.jpg" alt="Storage">
+
+    </div>
+
+    <!-- STORAGE -->
+
+    <div class="storage-box">
+
+      <h3 class="storage-highlight">
+        256GB
+      </h3>
+
+      <p class="storage-text">
+        starting storage
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!---FAMILY SECTION -->
+
+<section class="family-section">
+
+  <div class="container text-center">
+
+    <p class="family-subtitle">
+      All in the family
+    </p>
+
+    <h2 class="family-title">
+      All the must-haves.<br>
+      All on iPhone.
+    </h2>
+
+    <!-- IMAGE -->
+
+    <div class="family-image">
+
+      <img src="img/family1.png" alt="iPhone Family">
+
+    </div>
+
+    <!-- DESCRIPTION -->
+
+    <p class="family-description">
+      The latest iPhone models come with tons to love. Fast, secure connections with Wi-Fi, 5G connectivity and eSIM. Safety features like Crash Detection designed to give you peace of mind. Helpful Apple Intelligence features like visual intelligence to make your everyday easier. And iOS for seamless ways to share photos and files, connect with friends and family, and more.
+    </p>
+
+  </div>
+
+</section>
+
+
+
+<!--FOOTER SECTION-->
+
+<footer class="footer-section">
+
+  <div class="container">
+
+    <div class="footer-content text-center">
+
+      <p class="footer-text">
+           © 2026 iphone17e. All rights reserved.Designed by Ruchi Rani
+      </p>
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+
+<script>
+
+
+
+
+
+ /* COLOR SLIDER */
+
+document.addEventListener("DOMContentLoaded", function () {
+  const track      = document.getElementById("phoneTrack");
+  const buttons    = document.querySelectorAll(".color-btn");
+  const colorName  = document.getElementById("colorName");
+
+  
+  if (!track || !buttons.length) {
+    console.warn("Color slider elements not found.");
+    return;
+  }
+
+ 
+  buttons.forEach(button => {
+    button.addEventListener("click", function () {
+   
+      buttons.forEach(btn => btn.classList.remove("active"));
+      this.classList.add("active");
+
+      
+      const index = Number(this.dataset.index);
+      track.style.transform = `translateX(-${index * 420}px)`;
+
+      
+      colorName.style.transition = "opacity 0.4s ease";
+      colorName.style.opacity = "0";
+
+      setTimeout(() => {
+        colorName.textContent = this.dataset.name;
+        colorName.style.opacity = "1";
+      }, 280);
+    });
+  });
+});
+
+/* CAMERA SECTIN */
+
+document.addEventListener("DOMContentLoaded", () => {
+  const buttons = document.querySelectorAll(".cam-btn");
+  const track = document.getElementById("imageTrack");
+  const imageName = document.getElementById("imageName");
+  const cameraText = document.getElementById("cameraText");
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", function(){
+      buttons.forEach(btn => btn.classList.remove("active"));
+      this.classList.add("active");
+
+      const index = Number(this.dataset.index);
+
+      track.style.transform = `translateX(-${index * 20}%)`;
+
+      imageName.innerText = this.dataset.name;
+      cameraText.innerText = this.dataset.text;
+
+      
+      imageName.style.animation = "none";
+      cameraText.style.animation = "none";
+      setTimeout(() => {
+        imageName.style.animation = "fadeUp 0.8s ease";
+        cameraText.style.animation = "fadeUp 0.8s ease";
+      }, 50);
+    });
+  });
+});
+
+
+
+</script>
+
+</body>
+</html>
